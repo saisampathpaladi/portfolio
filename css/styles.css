@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f0f0f0;
-    transition: background-color 0.5s ease;
+    transition: background-color 1s ease;
 }
 
 .container {
@@ -50,7 +50,7 @@ section {
     padding: 60px 0;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 section.visible {
