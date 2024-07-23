@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0;
+    background-color: #e0f7fa; /* Light cyan background */
     transition: background-color 1s ease;
 }
 
@@ -19,31 +19,63 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #46c4e3; /* Teal background */
     color: #fff;
-    padding: 40px 0;
+    padding: 20px 0; /* Reduced padding for compact header */
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column; /* Stack name and contact details vertically */
+    align-items: flex-start; /* Align to the start of the container */
 }
 
 header h1 {
-    float: left;
+    margin: 0;
 }
 
-header nav {
-    float: right;
+.contact-details {
+    margin-top: 10px; /* Space between name and contact details */
+    color: #fff;
+    text-align: left;
 }
 
-header nav ul {
+.contact-details a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.contact-details span {
+    display: block; /* Ensure the location pin and text are on a new line */
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Aligns the navigation items to the right */
+}
+
+nav ul {
+    display: flex;
     list-style-type: none;
 }
 
-header nav ul li {
-    display: inline;
+nav ul li {
     margin-left: 20px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 section {
@@ -60,6 +92,7 @@ section.visible {
 
 section h2 {
     margin-bottom: 10px;
+    color: #46c4e3; /* Teal color for headings */
 }
 
 section ul {
@@ -69,6 +102,7 @@ section ul {
 section ul li {
     margin-bottom: 5px;
 }
+
 /* Bullet points styling */
 ul {
     list-style-type: disc; /* Default bullet style */
@@ -79,13 +113,22 @@ li {
     margin-bottom: 10px; /* Space between bullet points */
 }
 
-
 footer {
     text-align: center;
-    background-color: #333;
+    background-color: #46c4e3; /* Teal background */
     color: #fff;
     padding: 10px 0;
     width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 .about-container {
@@ -98,7 +141,7 @@ footer {
 .about-photo {
     width: 300px; /* Square width */
     height: 300px; /* Square height */
-    background-color: #ccc;
+    background-color: #ddd; /* Light gray background */
     border-radius: 10px;
     margin-bottom: 20px;
     overflow: hidden;
@@ -111,31 +154,62 @@ footer {
 }
 
 .about-text {
-    max-width: 600px; /* Optional: to limit the width of the text content */
+    max-width: 800px; /* Increased to occupy more width */
+    text-align: left; /* Optional: left-align text */
+    margin: 0 auto;
 }
 
 .experience-item, .project-item {
     margin-bottom: 30px;
 }
 
+/* Project Section Flexbox */
+#projects .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .project-item {
-    display: inline-block;
-    width: calc(50% - 20px); /* Adjust based on desired spacing */
-    margin-right: 20px;
-    margin-bottom: 20px;
-    vertical-align: top;
+    width: 490px; /* Fixed width */
+    height: 270px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
+    object-fit: cover; /* Ensures images cover the container area */
+}
+
+.project-item h4 {
+    margin: 10px 0;
+    text-align: center;
+    color: #46c4e3; /* Teal color for project titles */
+}
+
+.project-item p {
+    margin: 0;
+    text-align: center;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Ensure even spacing in the project section */
-@media (min-width: 768px) {
-    .project-item:nth-child(odd) {
-        margin-right: 10px;
+@media (max-width: 768px) {
+    .project-item {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Adjust height for small screens */
     }
 }
