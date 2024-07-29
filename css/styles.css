@@ -93,6 +93,12 @@ section.visible {
 section h2 {
     margin-bottom: 10px;
     color: #46c4e3; /* Teal color for headings */
+    align-items: center;
+    text-align: center;
+}
+section p {
+    align-items: center;
+    text-align: center;
 }
 
 section ul {
@@ -145,12 +151,15 @@ footer a:hover {
     border-radius: 10px;
     margin-bottom: 20px;
     overflow: hidden;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
 .about-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    align-items: center; /* Ensure image covers the container area */
 }
 
 .about-text {
@@ -159,18 +168,18 @@ footer a:hover {
     margin: 0 auto;
 }
 
-.experience-item, .project-item {
+.experience-item, .project-item, .certification-item {
     margin-bottom: 30px;
 }
 
-/* Project Section Flexbox */
-#projects .container {
+/* Project and Certification Section Flexbox */
+#projects .container, #certifications .container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.project-item {
+.project-item, .certification-item {
     width: 490px; /* Fixed width */
     height: 270px; /* Fixed height */
     display: flex;
@@ -184,31 +193,73 @@ footer a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-item img {
+.project-item img, .certification-item img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures images cover the container area */
 }
 
-.project-item h4 {
+.project-item h4, .certification-item h4 {
     margin: 10px 0;
     text-align: center;
-    color: #46c4e3; /* Teal color for project titles */
+    color: #46c4e3; /* Teal color for project and certification titles */
 }
 
-.project-item p {
+.project-item p, .certification-item p {
     margin: 0;
     text-align: center;
 }
 
-.project-item:hover {
+.project-item:hover, .certification-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+#certifications {
+    padding: 60px 0;
+}
+
+.certification-item {
+    width: 300px; /* Fixed width */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.certification-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
+
+.certification-item img {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensures image covers the container area */
+}
+
+.certification-item h4 {
+    margin: 10px 0;
+    color: #46c4e3; /* Teal color for titles */
+}
+
+.certification-item p {
+    margin: 0;
+}
+
+.certification-item:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Ensure even spacing in the project section */
+/* Ensure even spacing in the project and certification sections */
 @media (max-width: 768px) {
-    .project-item {
+    .project-item, .certification-item {
         width: 100%; /* Full width on small screens */
         height: auto; /* Adjust height for small screens */
     }
