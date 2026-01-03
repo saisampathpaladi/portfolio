@@ -1,314 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Sampath Sai Paladi - Hacker Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sampath Sai Paladi - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <!-- Matrix canvas -->
-  <canvas id="matrix"></canvas>
-
-  <div id="ui">
     <header>
-      <div class="container header-grid">
-        <h1 class="brand">Sampath Sai Paladi</h1>
-        <nav class="top-nav">
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#resume">Resume</a></li>
-          </ul>
-        </nav>
-        <div class="contact-inline">
-          <a href="mailto:saisampathpaladi@gmail.com">Email</a> |
-          <a href="https://www.linkedin.com/in/sampathsaipaladi" target="_blank">LinkedIn</a> |
-          <a href="https://github.com/saisampathpaladi" target="_blank">GitHub</a> |
-          <a href="tel:+3530870396502">Phone</a> |
-          <span class="loc">Hyderabad, India</span>
+        <div class="container">
+            <h1>Sampath Sai Paladi</h1>
+            
+            <nav >
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                </ul>
+            </nav>
+            
+            <div class="contact-details">
+            <p>
+                <a href="mailto:saisampathpaladi@gmail.com">Email</a> |
+                <a href="https://www.linkedin.com/in/sampathsaipaladi" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/saisampathpaladi" target="_blank">GitHub</a> |
+                <a href="tel:+918639808261">Phone</a> |
+                <span><i class="fa fa-map-pin" aria-hidden="true"></i> Hyderabad, India</span>
+            </p>
         </div>
-      </div>
+        </div>
     </header>
 
-    <main class="main">
-      <section class="hero">
-        <div class="typing" id="intro"><span class="cursor">▌</span></div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about" class="panel">
-        <div class="container split">
-          <div class="about-photo">
-            <img src="src/your_photo.png" alt="Sampath Sai Paladi">
-          </div>
-          <div class="about-text">
-            <h2>About Me</h2>
-            <div class="encrypted" id="encrypted" tabindex="0" aria-label="Hover to decrypt">
-              <code id="enc-text">████████████████████████████████████████████████████████████████</code>
-              <div class="hint">hover to decrypt</div>
-            </div>
-            <p class="sr-only" id="plain-about">
-              I am a software engineer with over 3 years of industry experience in designing and maintaining robust data integration solutions.
-              Currently, I am expanding my skill set into DevOps, with a focus on automation, scalability, and reliability.
-              My goal is to blend my expertise in ETL with DevOps practices to streamline processes, enhance efficiency, and support continuous software delivery.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- EXPERIENCE -->
-      <section id="experience" class="panel">
+    <section id="about">
         <div class="container">
-          <h2>Work Experience</h2>
+            <div class="about-photo">
+                <img src="src/your_photo.png" alt="Sampath Sai Paladi">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I am a software engineer with over 3 years of industry experience in designing and maintaining robust data integration solutions. Currently, I am expanding my skill set into DevOps, with a focus on automation, scalability, and reliability. My goal is to blend my expertise in ETL with DevOps practices to streamline processes, enhance efficiency, and support continuous software delivery.</p>
+            </div>
+        </div>
+    </section>
 
-          <div class="experience-item">
+<section id="experience">
+    <div class="container">
+        <h2>Work Experience</h2>
+        <div class="experience-item">
             <h3>Upwork, (IIC Technology) Hyderabad — Freelance DevOps Engineer</h3>
             <p>Dec 2022 - Present</p>
             <ul>
-              <li>Managed and maintained Kubernetes clusters, ensuring high availability and scalability for containerized applications...</li>
-              <li>Conducted resource allocation and utilization analysis...</li>
-              <li>Streamlined CI/CD pipelines for Java-based apps using Maven...</li>
-              <li>Developed a custom Bash script for automated backups...</li>
-              <li>Implemented monitoring and alerting using Prometheus & Grafana...</li>
-              <li>Deployed Promtail for log aggregation integrated with Grafana...</li>
-              <li>Collaborated on Dockerfile creation and CI/CD webhooks...</li>
-              <li>Provisioned AWS infrastructure using Terraform and Ansible...</li>
-              <li>Built event-driven systems using SNS, SQS, API Gateway...</li>
+                <li>Managed and maintained Kubernetes clusters, ensuring high availability and scalability for containerized applications. Implemented rolling updates and automatic scaling to accommodate increased workloads during peak usage periods.</li>
+                <li>Conducted resource allocation and utilization analysis, leading to the optimization of container resource limits and requests. This resulted in a 15% reduction in infrastructure costs while maintaining optimal application performance.</li>
+                <li>Streamlined the CI/CD pipeline for Java-based applications using Maven, resulting in a 20% reduction in build and deployment times.</li>
+                <li>Developed a custom Bash script to automate routine system backups, enhancing disaster recovery capabilities.</li>
+                <li>Implemented proactive monitoring and alerting using Prometheus and Grafana, reducing system downtime by 15%.</li>
+                <li>Deployed Promtail to EKS clusters for log collection and aggregation with Loki, then integrated with Grafana for real-time log visualization and monitoring.</li>
+                <li>Collaborated with multiple teams on Dockerfile creation sessions and containerized applications and implemented CI-CD pipeline GitHub web-hooks for automated image creation and storage of container in both ECR and Docker Hub.</li>
+                <li>Provisioned and managed AWS cloud infrastructure using Terraform, and configured and automated server setups using Ansible, enhancing deployment efficiency and system consistency.</li>
+                <li>Utilized AWS services such as SNS, SQS, and API Gateway to build event-driven architectures, enhancing system responsiveness and flexibility.</li>
+                <!-- Add more list items as needed -->
             </ul>
-          </div>
-
-          <div class="experience-item">
+        </div>
+        <div class="experience-item">
             <h3>Accenture, Hyderabad — Software Analyst</h3>
             <p>Feb 2021 - Sept 2022</p>
             <ul>
-              <li>Migrated projects from DB2 to Snowflake cloud...</li>
-              <li>Monitored ETL apps with Informatica, AutoSys, and Splunk...</li>
-              <li>Automated governance tasks with Python and shell scripts...</li>
-              <li>Written Ansible YAML scripts for remote servers...</li>
-              <li>Configured Jenkins declarative CI/CD pipelines...</li>
-              <li>Resolved critical production incidents promptly...</li>
+                <li>Enabled the migration of projects from DB2 to Snowflake cloud in an Agile environment, collaborating with cross-functional teams and automating rejection handling with shell scripts and Informatica jobs, reducing SLA delays.</li>
+                <li>Monitored and maintained ETL applications using Informatica, AutoSys, and Splunk, ensuring high efficiency and minimal downtime, while optimizing workflows and system performance.</li>
+                <li>Automated manual tasks and processes for improved governance and compliance, and managed database access in coordination with the DB admin.</li>
+                <li>Written the Ansible YAML scripts to configure the remote servers.</li>
+                <li>Jenkins CI/CD Pipeline configuration using declarative pipeline for each stage of deployment.</li>
+                <li>Experience in automation of manual tasks & processes enabling better governance and compliance using Python.</li>
+                <li>Resolved critical production incidents promptly, maintaining system availability and minimizing business impact.</li>
+                <li>Demonstrated excellent problem-solving skills by automating routine server maintenance tasks, freeing up valuable team resources for strategic projects.</li>
+                <!-- Add more list items as needed -->
             </ul>
-          </div>
         </div>
-      </section>
+    </div>
+</section>
 
-      <!-- SKILLS -->
-      <section id="skills" class="panel">
+
+    <section id="skills">
         <div class="container">
-          <h2>Technical Skills</h2>
-          <ul class="skills-list">
-            <li><strong>Cloud Technologies:</strong> AWS, Snowflake</li>
-            <li><strong>Build Tools:</strong> Maven</li>
-            <li><strong>Container Technologies:</strong> Docker, Kubernetes, Podman</li>
-            <li><strong>Scripting:</strong> Shell, Bash</li>
-            <li><strong>Version Control System:</strong> Git & GitHub</li>
-            <li><strong>Configuration Management:</strong> Ansible</li>
-            <li><strong>Infrastructure as Code:</strong> Terraform</li>
-            <li><strong>CI/CD:</strong> Jenkins, Gitlab, GitHub Actions</li>
-            <li><strong>Monitoring Tools:</strong> Splunk, Grafana, Prometheus</li>
-            <li><strong>ETL Tools:</strong> Informatica, Autosys</li>
-            <li><strong>Database Tools:</strong> DB2, MySQL, SQL</li>
-            <li><strong>Web Servers:</strong> Nginx, Apache2</li>
-            <li><strong>Application Server:</strong> Tomcat</li>
-          </ul>
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Cloud Technologies:</strong> AWS, Snowflake</li>
+                <li><strong>Build Tools:</strong> Maven</li>
+                <li><strong>Container Technologies:</strong> Docker, Kubernetes, Podman</li>
+                <li><strong>Scripting:</strong> Shell, Bash</li>
+                <li><strong>Version Control System:</strong> Git & GitHub</li>
+                <li><strong>Configuration Management:</strong> Ansible</li>
+                <li><strong>Infrastructure as Code:</strong> Terraform</li>
+                <li><strong>CI/CD:</strong> Jenkins, Gitlab, GitHub Actions</li>
+                <li><strong>Monitoring Tools:</strong> Splunk, Grafana, Prometheus</li>
+                <li><strong>ETL Tools:</strong> Informatica, Autosys</li>
+                <li><strong>Database Tools:</strong> DB2, MySQL, SQL</li>
+                <li><strong>Web Servers:</strong> Nginx, Apache2</li>
+                <li><strong>Application Server:</strong> Tomcat</li>
+                <!-- Add more list items as needed -->
+            </ul>
         </div>
-      </section>
+    </section>
 
-      <!-- PROJECTS -->
-      <section id="projects" class="panel">
-        <div class="container">
-          <h2>Projects</h2>
-          <div class="floppy-grid">
-
-            <!-- Project 1 -->
-            <a class="floppy" href="https://github.com/saisampathpaladi/sai-sampath-projects/tree/main/terraform-projects/terraform-todo-list%20in%20AWS%20EKS%20cluster%20deployment" target="_blank" rel="noopener noreferrer">
-              <div class="disk-top"><div class="label">Project 1</div></div>
-              <div class="disk-body">
-                <div class="thumb">
-                  <img src="src/project1.png" alt="Terraform creating EKS cluster with VPCs" />
-                </div>
-                <div class="proj-info">
-                  <h4>Terraform creating EKS cluster with VPCs</h4>
-                  <div class="badges">
-                    <a class="badge git" href="https://github.com/saisampathpaladi/sai-sampath-projects/tree/main/terraform-projects/terraform-todo-list%20in%20AWS%20EKS%20cluster%20deployment" target="_blank">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <!-- Project 2 -->
-            <a class="floppy" href="https://github.com/saisampathpaladi/Grafana_projects" target="_blank" rel="noopener noreferrer">
-              <div class="disk-top"><div class="label">Project 2</div></div>
-              <div class="disk-body">
-                <div class="thumb">
-                  <img src="src/project2.png" alt="Grafana dashboard creation using Promtail, Loki, Prometheus" />
-                </div>
-                <div class="proj-info">
-                  <h4>Grafana dashboard creation using Promtail, Loki, Prometheus</h4>
-                  <div class="badges">
-                    <a class="badge git" href="https://github.com/saisampathpaladi/Grafana_projects" target="_blank">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <!-- Project 3 -->
-            <a class="floppy" href="https://saisampathpaladi.github.io/Chess-website/" target="_blank" rel="noopener noreferrer">
-              <div class="disk-top"><div class="label">Project 3</div></div>
-              <div class="disk-body">
-                <div class="thumb">
-                  <img src="src/project3.png" alt="Docker Containerization of chess app" />
-                </div>
-                <div class="proj-info">
-                  <h4>Docker Containerization of chess app</h4>
-                  <div class="badges">
-                    <a class="badge git" href="https://github.com/saisampathpaladi/Chess_Docker_Containerize_apps" target="_blank">GitHub</a>
-                    <a class="badge live" href="https://saisampathpaladi.github.io/Chess-website/" target="_blank">Live Demo</a>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <!-- Project 4 -->
-            <a class="floppy" href="https://saisampathpaladi.github.io/PDF-TO-WORD-CONVERTER/" target="_blank" rel="noopener noreferrer">
-              <div class="disk-top"><div class="label">Project 4</div></div>
-              <div class="disk-body">
-                <div class="thumb">
-                  <img src="src/project4.png" alt="PDF to WORD converter containerized in Docker and setup in GitHub Actions" />
-                </div>
-                <div class="proj-info">
-                  <h4>PDF to WORD converter containerized in Docker and setup in GitHub Actions</h4>
-                  <div class="badges">
-                    <a class="badge git" href="https://github.com/saisampathpaladi/PDF-TO-WORD-CONVERTER" target="_blank">GitHub</a>
-                    <a class="badge live" href="https://saisampathpaladi.github.io/PDF-TO-WORD-CONVERTER/" target="_blank">Live Demo</a>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <!-- Project 5 -->
-            <a class="floppy" href="https://github.com/saisampathpaladi/sai-sampath-projects/tree/main/terraform-projects/terraform_static_web%20hosting%20S3%20buckets" target="_blank" rel="noopener noreferrer">
-              <div class="disk-top"><div class="label">Project 5</div></div>
-              <div class="disk-body">
-                <div class="thumb">
-                  <img src="src/project5.png" alt="Terraform automated S3 creation and web hosting" />
-                </div>
-                <div class="proj-info">
-                  <h4>Terraform automated S3 creation and web hosting</h4>
-                  <div class="badges">
-                    <a class="badge git" href="https://github.com/saisampathpaladi/sai-sampath-projects/tree/main/terraform-projects/terraform_static_web%20hosting%20S3%20buckets" target="_blank">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <!-- Project 6 -->
-            <a class="floppy" href="https://saisampathpaladi.github.io/github-actions_CICD_pipleline/" target="_blank" rel="noopener noreferrer">
-              <div class="disk-top"><div class="label">Project 6</div></div>
-              <div class="disk-body">
-                <div class="thumb">
-                  <img src="src/project6.png" alt="GitHub Actions CICD pipeline" />
-                </div>
-                <div class="proj-info">
-                  <h4>GitHub Actions CICD pipeline</h4>
-                  <div class="badges">
-                    <a class="badge git" href="https://github.com/saisampathpaladi/github-actions_CICD_pipleline" target="_blank">GitHub</a>
-                    <a class="badge live" href="https://saisampathpaladi.github.io/github-actions_CICD_pipleline/" target="_blank">Live Demo</a>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <!-- Project 7 -->
-            <a class="floppy" href="https://hub.docker.com/repository/docker/sampathsai/my-todo-app/" target="_blank" rel="noopener noreferrer">
-              <div class="disk-top"><div class="label">Project 7</div></div>
-              <div class="disk-body">
-                <div class="thumb">
-                  <img src="src/project7.png" alt="Jenkins CI-CD pipeline Docker, GitHub-webhooks" />
-                </div>
-                <div class="proj-info">
-                  <h4>Jenkins CI-CD pipeline Docker, GitHub-webhooks</h4>
-                  <div class="badges">
-                    <a class="badge git" href="https://github.com/saisampathpaladi/CI-CD_Jenkins_TO-DO-LIST-APP" target="_blank">GitHub</a>
-                    <a class="badge live" href="https://hub.docker.com/repository/docker/sampathsai/my-todo-app/" target="_blank">Live Demo</a>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-          </div>
+    <section id="projects">
+        <h2>Projects</h2>
+    <div class="container">
+        
+        <div class="project-item">
+            <img src="src/project7.png" alt="Project 7">
+            <h4>Terraform creating EKS cluster with VPCs</h4>
+            <p><a href="https://github.com/saisampathpaladi/sai-sampath-projects/tree/main/terraform-projects/terraform-todo-list%20in%20AWS%20EKS%20cluster%20deployment" target="_blank">GitHub Link</a></p>
         </div>
-      </section>
-
-      <!-- CERTIFICATIONS -->
-      <section id="certifications" class="panel">
-        <div class="container">
-          <h2>Certifications</h2>
-          <div class="cert-grid">
-            <a href="src/cert3.pdf" target="_blank" class="cert">
-              <img src="src/cert3-1.png" alt="Introduction to DevOps">
-              <h4>Introduction to DevOps</h4>
-              <p>Great Learning Academy</p>
-            </a>
-            <a href="src/cert1.png" target="_blank" class="cert">
-              <img src="src/cert1.png" alt="Linux for DevOps">
-              <h4>Linux for DevOps</h4>
-              <p>Trainwithshubham</p>
-            </a>
-            <a href="src/cert2.png" target="_blank" class="cert">
-              <img src="src/cert2.png" alt="Python for DevOps">
-              <h4>Python for DevOps Masterclass</h4>
-              <p>Trainwithshubham</p>
-            </a>
-            <a href="src/cert4.png" target="_blank" class="cert">
-              <img src="src/cert4.png" alt="Computer Networking">
-              <h4>Computer Networking Masterclass</h4>
-              <p>Trainwithshubham</p>
-            </a>
-          </div>
+        <div class="project-item">
+            <img src="src/project3.png" alt="Project 3">
+            <h4>Grafana dashboard creation using Promtail, Loki, Prometheus</h4>
+            <p><a href="https://github.com/saisampathpaladi/Grafana_projects" target="_blank">GitHub Link</a></p>
         </div>
-      </section>
-
-      <!-- RESUME -->
-      <section id="resume" class="panel">
-        <div class="container">
-          <h2>Resume</h2>
-          <p><a href="src/resume.pdf" target="_blank">Download Resume</a></p>
+        <div class="project-item">
+            <img src="src/project4.PNG" alt="Project 4">
+            <h4>Docker Containerization of chess app</h4>
+            <p><a href="https://github.com/saisampathpaladi/Chess_Docker_Containerize_apps" target="_blank">GitHub Link</a> | <a href="https://saisampathpaladi.github.io/Chess-website/" target="_blank">Live Demo</a></p>
         </div>
-      </section>
-    </main>
+        <div class="project-item">
+            <img src="src/project5.png" alt="Project 5">
+            <h4>PDF to WORD converter containerized in Docker and setup in GitHub Actions</h4>
+            <p><a href="https://github.com/saisampathpaladi/PDF-TO-WORD-CONVERTER" target="_blank">GitHub Link</a> | <a href="https://saisampathpaladi.github.io/PDF-TO-WORD-CONVERTER/" target="_blank">Live Demo</a></p>
+        </div>
+        <div class="project-item">
+            <img src="src/project6.png" alt="Project 6">
+            <h4>Terraform automated S3 creation and web hosting</h4>
+            <p><a href="https://github.com/saisampathpaladi/sai-sampath-projects/tree/main/terraform-projects/terraform_static_web%20hosting%20S3%20buckets" target="_blank">GitHub Link</a></p>
+        </div>
+        <div class="project-item">
+            <img src="src/project1.png" alt="Project 1">
+            <h4>GitHub Actions CICD pipeline</h4>
+            <p><a href="https://github.com/saisampathpaladi/github-actions_CICD_pipleline?tab=readme-ov-file" target="_blank">GitHub Link</a> | <a href="https://saisampathpaladi.github.io/github-actions_CICD_pipleline/" target="_blank">Live Demo</a></p>
+        </div>
+        <div class="project-item">
+            <img src="src/project2.png" alt="Project 2">
+            <h4>Jenkins CI-CD pipeline Docker, GitHub-webhooks</h4>
+            <p><a href="https://github.com/saisampathpaladi/CI-CD_Jenkins_TO-DO-LIST-APP" target="_blank">GitHub Link</a> | <a href="https://hub.docker.com/repository/docker/sampathsai/my-todo-app/" target="_blank">Docker Image</a></p>
+        </div>
+    </div>
+    <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="container"> 
+        <div class="certification-item">
+            <a href="src/cert3.pdf" target="_blank"> <!-- Link to the certification image -->
+                <img src="src/cert3-1.png" alt="Certification 1">
+                <h4>Introduction to DevOps</h4>
+                <p>completed the "Introduction to DevOps" course offered by Great Learning Academy.</p>
+            </a>
+        </div>
+        <div class="certification-item">
+            <a href="src/cert1.png" target="_blank"> <!-- Link to the certification image -->
+                <img src="src/cert1.png" alt="Certification 1">
+                <h4>Linux for DevOps</h4>
+                <p>Trainwithshubham course certification for Linux.</p>
+            </a>
+        </div>
+        <div class="certification-item">
+            <a href="src/cert2.png" target="_blank"> <!-- Link to the certification image -->
+                <img src="src/cert2.png" alt="Certification 2">
+                <h4>Python for DevOps Masterclass</h4>
+                <p>Trainwithshubham course certification for Python.</p>
+            </a>
+        </div>
+        <div class="certification-item">
+            <a href="src/cert4.png" target="_blank"> <!-- Link to the certification image -->
+                <img src="src/cert4.png" alt="Certification 2">
+                <h4>Computer networking Masterclass</h4>
+                <p>Trainwithshubham course certification for comuter networking.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="resume">
+    <h2>Resume</h2>
+    <p><a href="src/resume.pdf" target="_blank">Download Resume</a></p>
+</section>
+
 
     <footer>
-      <div class="container footer-grid">
-        <p>&copy; 2024 Sampath Sai Paladi. All rights reserved.</p>
-        <p>
-          Contact:
-          <a href="https://www.linkedin.com/in/sampathsaipaladi" target="_blank">LinkedIn</a> |
-          <a href="mailto:saisampathpaladi@gmail.com">Email</a> |
-          <a href="https://github.com/saisampathpaladi" target="_blank">GitHub</a>
-        </p>
-      </div>
+        <div class="container">
+            <p>&copy; 2024 Sampath Sai Paladi. All rights reserved.</p>
+            <p>Contact me: 
+                <a href="www.linkedin.com/in/sampathsaipaladi" target="_blank">LinkedIn</a> | 
+                <a href="mailto:saisampathpaladi@gmail.com">Email</a> | 
+                <a href="https://github.com/saisampathpaladi" target="_blank">GitHub</a> | 
+                <a href="tel:91+8639808261">Phone</a>
+            </p>
+        </div>
     </footer>
 
-    <div id="watermark">Made by Sampath Sai Paladi</div>
-
-    <!-- Terminal-style contact window -->
-    <div id="terminal-contact" aria-hidden="true">
-      <div class="term-header">Contact</div>
-      <div class="term-body">
-        <p>&gt; Email: <a href="mailto:saisampathpaladi@gmail.com">saisampathpaladi@gmail.com</a></p>
-        <p>&gt; LinkedIn: <a href="https://www.linkedin.com/in/sampathsaipaladi" target="_blank">linkedin.com/in/sampathsaipaladi</a></p>
-        <p>&gt; GitHub: <a href="https://github.com/saisampathpaladi" target="_blank">github.com/saisampathpaladi</a></p>
-        <p>&gt; Phone: <a href="tel:+353 0870396502">+353 0870396502</a></p>
-      </div>
-      <div class="term-close" id="term-close">✕</div>
-    </div>
-  </div>
-
-  <script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
